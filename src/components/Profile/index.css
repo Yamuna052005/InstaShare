@@ -1,62 +1,72 @@
 .profile-container {
-    width: 100%;
-    margin: 0;
-    padding: 20px;
+    width: min(935px, calc(100% - 32px));
+    margin: 32px auto 0;
+    padding: 36px 48px 0;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 /* Profile details */
 
 .profile-details-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
 }
 
 .profile-image {
-    width: 95px;
-    height: 95px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+    border: 1px solid #dbdbdb;
+    padding: 4px;
+    background: #ffffff;
 }
 
 .profile-info {
-    margin-left: 25px;
-    padding-top: 5px;
+    margin-left: 64px;
+    padding-top: 0;
     flex: 1;
 }
 
 .profile-info h1 {
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0 0 18px;
+    color: #262626;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 0 24px;
 }
 
 .profile-counts {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: flex-start;
+    gap: 42px;
     margin-bottom: 0;
 }
 
 .profile-counts p {
     margin: 0;
-    font-size: 13px;
+    color: #262626;
+    font-size: 15px;
     text-align: center;
     white-space: nowrap;
 }
 
 .profile-counts span {
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /* Bio */
 
 .profile-bio {
-    font-size: 13px;
-    line-height: 1.6;
-    margin: 18px 0 0;
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 28px 0 0;
     color: #262626;
 }
 
@@ -65,17 +75,17 @@
 .profile-stories {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 25px 0;
+    gap: 18px;
+    padding: 30px 0;
     overflow-x: auto;
 }
 
 .profile-story-image {
-    width: 65px;
-    height: 65px;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
     object-fit: cover;
-    padding: 3px;
+    padding: 4px;
     border: 1px solid #dbdbdb;
     flex-shrink: 0;
 }
@@ -85,10 +95,11 @@
 .posts-heading {
     display: flex;
     align-items: center;
-    gap: 10px;
-    height: 55px;
-    margin: 0 -20px;
-    padding: 0 20px;
+    justify-content: center;
+    gap: 8px;
+    height: 54px;
+    margin: 0;
+    padding: 0;
     border-top: 1px solid #dbdbdb;
     border-bottom: 1px solid #dbdbdb;
 }
@@ -98,8 +109,11 @@
 }
 
 .posts-heading h2 {
-    font-size: 16px;
-    font-weight: 500;
+    color: #262626;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
     margin: 0;
 }
 
@@ -108,8 +122,8 @@
 .profile-posts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin: 2px -20px 0;
+    gap: 4px;
+    margin: 4px 0 0;
 }
 
 .profile-post-image {
@@ -117,12 +131,17 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
+    transition: opacity 160ms ease;
+}
+
+.profile-post-image:hover {
+    opacity: 0.86;
 }
 
 /* No posts */
 
 .no-posts-container {
-    min-height: 300px;
+    min-height: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,53 +163,69 @@
 @media screen and (min-width: 768px) {
 
     .profile-container {
-        width: 90%;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 30px 0;
+        margin-top: 32px;
     }
+}
 
-    .profile-details-container {
-        align-items: center;
+@media screen and (max-width: 767px) {
+    .profile-container {
+        width: 100%;
+        margin: 0;
+        padding: 24px 16px 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .profile-image {
-        width: 150px;
-        height: 150px;
+        width: 86px;
+        height: 86px;
+        padding: 3px;
     }
 
     .profile-info {
-        margin-left: 40px;
+        margin-left: 20px;
     }
 
     .profile-info h1 {
-        font-size: 24px;
+        font-size: 20px;
+        margin-bottom: 18px;
     }
 
     .profile-counts {
-        justify-content: flex-start;
-        gap: 35px;
+        justify-content: space-between;
+        gap: 12px;
     }
 
-    .profile-counts p {
-        font-size: 15px;
+    .profile-counts p,
+    .profile-bio {
+        font-size: 13px;
+    }
+
+    .profile-counts span {
+        font-size: 14px;
     }
 
     .profile-bio {
-        font-size: 15px;
+        margin-top: 22px;
+    }
+
+    .profile-stories {
+        padding: 24px 0;
     }
 
     .profile-story-image {
-        width: 80px;
-        height: 80px;
+        width: 64px;
+        height: 64px;
     }
 
     .posts-heading {
-        margin: 0;
+        margin: 0 -16px;
     }
 
     .profile-posts {
-        margin: 3px 0 0;
+        margin: 4px -16px 0;
+        gap: 2px;
     }
 }
 

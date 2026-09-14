@@ -63,7 +63,7 @@ const LoginForm = () => {
     <div className="login-form-container">
       <div className="landing-image-container">
         <img
-          src="https://res.cloudinary.com/oliceids/image/upload/v1789366123/Standard_Collection_8_ooz4dx.png"
+          src="https://res.cloudinary.com/oliceids/image/upload/v1789408309/Layer_2_kwfyjp.png"
           alt="website login"
           className="landing-image"
         />
