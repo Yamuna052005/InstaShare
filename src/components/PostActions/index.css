@@ -1,0 +1,53 @@
+.post-actions {
+    padding: 10px 15px;
+}
+.left-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.left-actions button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+.post-actions p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+    .post-actions {
+        padding: 8px 10px;
+    }
+    .left-actions {
+        gap: 12px;
+    }
+    .left-actions button {
+        font-size: 22px;
+    }
+    .post-actions p {
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .post-actions {
+        padding: 10px 15px;
+    }
+
+    .left-actions button {
+        font-size: 23px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .post-actions {
+        padding: 10px 15px;
+    }
+    .left-actions {
+        gap: 16px;
+    }
+}

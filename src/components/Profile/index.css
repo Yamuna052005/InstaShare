@@ -1,0 +1,202 @@
+.profile-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Profile details */
+
+.profile-details-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.profile-image {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    margin-left: 25px;
+    padding-top: 5px;
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 18px;
+}
+
+.profile-counts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.profile-counts p {
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.profile-counts span {
+    font-weight: 600;
+}
+
+/* Bio */
+
+.profile-bio {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 18px 0 0;
+    color: #262626;
+}
+
+/* Stories */
+
+.profile-stories {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    overflow-x: auto;
+}
+
+.profile-story-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 3px;
+    border: 1px solid #dbdbdb;
+    flex-shrink: 0;
+}
+
+/* Posts heading */
+
+.posts-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 55px;
+    margin: 0 -20px;
+    padding: 0 20px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.posts-heading svg {
+    font-size: 18px;
+}
+
+.posts-heading h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Posts */
+
+.profile-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 2px -20px 0;
+}
+
+.profile-post-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* No posts */
+
+.no-posts-container {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-posts-container svg {
+    font-size: 60px;
+}
+
+.no-posts-container h2 {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+
+    .profile-container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+
+    .profile-details-container {
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-info {
+        margin-left: 40px;
+    }
+
+    .profile-info h1 {
+        font-size: 24px;
+    }
+
+    .profile-counts {
+        justify-content: flex-start;
+        gap: 35px;
+    }
+
+    .profile-counts p {
+        font-size: 15px;
+    }
+
+    .profile-bio {
+        font-size: 15px;
+    }
+
+    .profile-story-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .posts-heading {
+        margin: 0;
+    }
+
+    .profile-posts {
+        margin: 3px 0 0;
+    }
+}
+
+.profile-story-button {
+    flex-shrink: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+}

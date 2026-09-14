@@ -1,0 +1,62 @@
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.story img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.story p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #262626;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    .story {
+        margin: 0 6px;
+    }
+
+    .story img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .story p {
+        font-size: 12px;
+        max-width: 70px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .story img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .story img {
+        width: 80px;
+        height: 80px;
+    }
+}
+.story {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}

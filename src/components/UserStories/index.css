@@ -1,0 +1,188 @@
+.stories-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.stories-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow-x: auto;
+    flex: 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.stories-list::-webkit-scrollbar {
+    display: none;
+}
+
+.story-arrow {
+    background-color: #ffffff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .stories-container {
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .stories-list {
+        gap: 16px;
+    }
+
+    .story-arrow {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .stories-container {
+        padding: 20px;
+    }
+
+    .stories-list {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .stories-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+.own-story-image-wrap {
+    position: relative;
+    display: block;
+}
+
+.own-story .story-add-icon {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: #4094ef;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.story-composer-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.62);
+}
+
+.story-composer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: min(100%, 400px);
+    padding: 24px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.story-composer-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.story-composer-heading h2,
+.story-composer p {
+    margin: 0;
+}
+
+.story-composer-heading button {
+    border: 0;
+    background: transparent;
+    font-size: 26px;
+}
+
+.story-composer label {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.story-composer > img {
+    width: 100%;
+    max-height: 280px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.story-suggested-songs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.story-suggested-song {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    padding: 8px;
+    background: #f8fbff;
+    color: #1e3a5f;
+    cursor: pointer;
+    text-align: left;
+}
+
+.story-suggested-song > span:first-child {
+    color: #4094ef;
+    font-size: 20px;
+}
+
+.story-suggested-song strong,
+.story-suggested-song small {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.story-suggested-song strong {
+    font-size: 12px;
+}
+
+.story-suggested-song small {
+    margin-top: 2px;
+    color: #64748b;
+    font-size: 10px;
+}
+
+.selected-story-song {
+    border-color: #4094ef;
+    background: #eaf4ff;
+}
+
+.publish-story-button {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px;
+    background: #4094ef;
+    color: #ffffff;
+    font-weight: 700;
+}
