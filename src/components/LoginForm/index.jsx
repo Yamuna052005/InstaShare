@@ -2,6 +2,7 @@ import './index.css'
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Cookies from 'js-cookie'
+import landingImage from '../../assets/hero.png'
 
 const LoginForm = () => {
   const [username, setUsername] = useState('')
@@ -63,7 +64,7 @@ const LoginForm = () => {
     <div className="login-form-container">
       <div className="landing-image-container">
         <img
-          src="https://res.cloudinary.com/oliceids/image/upload/v1789038281/Illustration_vi2vuh.png"
+          src={landingImage}
           alt="website login"
           className="landing-image"
         />
