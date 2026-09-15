@@ -1,16 +1,124 @@
-# React + Vite
+# Insta Share
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Insta Share is an Instagram Clone web application built using React.js.  
+The application allows users to authenticate, view stories and posts, search posts, like and unlike posts, and view user profiles.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User authentication with JWT
+- Protected routes
+- Login with username and password
+- Display user stories
+- Open and view stories
+- Display Instagram posts
+- Like and unlike posts
+- Display post captions
+- Navigate to user profiles
+- Search posts
+- View My Profile
+- View other users' profiles
+- API failure handling with retry option
+- Search-not-found view
+- Page-not-found view
+- Responsive design for mobile, tablet, and desktop
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript
+- React Router
+- React Hooks
+- REST APIs
+- CSS
+- React Icons
+- js-cookie
 
-## Expanding the ESLint configuration
+## React Concepts Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project demonstrates the following React concepts:
+
+- Functional Components
+- `useState`
+- `useEffect`
+- `useParams`
+- `useNavigate`
+- Conditional Rendering
+- Event Handling
+- API Integration
+- Authentication
+- Protected Routes
+- Responsive Design
+
+## Project Structure
+
+```text
+src/
+│
+├── components/
+│   │
+│   ├── CommentSection/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── FailureView/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── Header/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── Home/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── LoginForm/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── MyProfile/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── NotFound/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── Post/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── PostActions/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── PostsList/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── Profile/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── ProtectedRoute/
+│   │   └── index.js
+│   │
+│   ├── UserDetails/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── UserStories/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   ├── UserStoriesModal/
+│   │   ├── index.js
+│   │   └── index.css
+│   │
+│   └── UserStory/
+│       ├── index.js
+│       └── index.css
+│
+├── App.jsx
+├── App.css
+└── index.js
